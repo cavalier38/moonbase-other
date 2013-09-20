@@ -22,7 +22,7 @@ plugin_source_download_bzr() {
   if [ "${1:0:6}" != "bzr://" -a "${1:0:11}" != "bzr+http://" -a "${1:0:12}" != "bzr+https://" -a "${1:0:10}" != "bzr+ssh://" ] ; then
     return 2
   fi
-  debug_msg "plugin_source_needrefresh_bzr($@)"
+  debug_msg "plugin_source_download_bzr($@)"
 
   if ! module_installed bzr ; then
     # full stop: we need to make sure the user sees this error:

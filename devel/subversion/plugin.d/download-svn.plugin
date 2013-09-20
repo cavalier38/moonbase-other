@@ -20,7 +20,7 @@ plugin_source_download_svn() {
   if [ "${1:0:6}" != "svn://" -a "${1:0:11}" != "svn+http://" -a "${1:0:12}" != "svn+https://" -a "${1:0:10}" != "svn+ssh://" ] ; then
     return 2
   fi
-  debug_msg "plugin_source_needrefresh_svn($@)"
+  debug_msg "plugin_source_download_svn($@)"
 
   if ! module_installed subversion ; then
     # full stop: we need to make sure the user sees this error:
